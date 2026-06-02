@@ -1,0 +1,11 @@
+# AdonisJS must be compiled before start; server runs from the build/ output.
+# See: https://docs.adonisjs.com/guides/deployment
+
+[build]
+builder = "nixpacks"
+buildCommand = "npm ci && npm run build"
+
+[deploy]
+startCommand = "cd build && node bin/server.js"
+healthcheckPath = "/"
+restartPolicyType = "ON_FAILURE"
