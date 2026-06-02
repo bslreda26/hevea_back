@@ -6,6 +6,6 @@ builder = "nixpacks"
 buildCommand = "npm ci && npm run build"
 
 [deploy]
-startCommand = "cd build && node bin/server.js"
+startCommand = "npm start"
 healthcheckPath = "/"
 restartPolicyType = "ON_FAILURE"
